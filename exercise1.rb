@@ -1,6 +1,5 @@
 class Person
-  attr_accessor :name, :age 
-  def initialize(name ="", age = 1)
+  def initialize(name, age)
     @name = name
     @age = age
   end
@@ -12,8 +11,7 @@ class Person
 end
 
 class Student < Person
-  attr_accessor :section
-  def initialize(name="", age = 1, section = "")
+  def initialize(name, age, section)
     super(name, age)
     @section = section
   end
@@ -23,7 +21,6 @@ class Student < Person
     p "Section: #{@section}"
   end
 end
-
 
 p = Person.new("Tomas Wild", 37)
 p.display
